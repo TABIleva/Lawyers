@@ -1,0 +1,104 @@
+.lawyers {
+    background: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 80px 0;
+
+    &__title {
+        text-align: center;
+    }
+    &__description {
+        color: #222;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19.2px;
+        width: 920px;
+        margin-top: 24px;
+        margin-bottom: 48px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        // height: 414px;
+    }
+    &__card {
+        width: 312px;
+        height: 414px;
+        background-color: white;
+        position: relative;
+    }
+    &__card-visible {
+        width: 100%;
+        transition: 0.3s;
+
+        &:hover {
+            opacity: 0;
+        }
+    }
+    &__card-img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        // transform: 50% 50%;
+    }
+    &__card-namewrap {
+        margin: 24px;
+    }
+    &__card-namewrap2 {
+        margin-top: 83px;
+    }
+    &__card-name {
+        color: #222;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19.2px;
+        padding-bottom: 10px;
+    }
+    &__card-specialty {
+        color: #222;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 16.8px;
+        text-transform: lowercase;
+        &:hover {
+            text-transform: none;
+        }
+    }
+    &__card-invisible {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        margin: 0 auto;
+        transition: 0.3s;
+        background-color: white;
+        &__card-specialty{
+            text-transform: none;
+        }
+        &:hover {
+            opacity: 1;
+            
+        }
+    }
+
+    &__card-description {
+        color: #000;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 16.8px;
+        margin: 40px 20px;
+    }
+    &__card-experience {
+        color: #222;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.2px;
+    }
+}

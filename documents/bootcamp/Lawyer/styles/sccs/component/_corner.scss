@@ -1,0 +1,65 @@
+.corner {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  z-index: 10;
+  --corner-color:white;
+  &__lt {
+    top: 20px;
+    left: 20px;
+    border-top: 1px solid var(--corner-color);
+    border-left: 1px solid var(--corner-color);
+  }
+  &__rt {
+    top: 20px;
+    right: 20px;
+    border-top: 1px solid var(--corner-color);
+    border-right: 1px solid var(--corner-color);
+  }
+  &__rb {
+    right: 20px;
+    bottom: 20px;
+    border-right: 1px solid var(--corner-color);
+    border-bottom: 1px solid var(--corner-color);
+  }
+  &__lb {
+    left: 20px;
+    bottom: 20px;
+    border-left: 1px solid var(--corner-color);
+    border-bottom: 1px solid var(--corner-color);
+  }
+
+}
+
+.corner-blue{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  --corner-color:#4F8FF0;
+  &__lt {
+    top: 20px;
+    left: 20px;
+    border-top: 1px solid var(--corner-color);
+    border-left: 1px solid var(--corner-color);
+  }
+  &__rt {
+    top: 20px;
+    right: 20px;
+    border-top: 1px solid var(--corner-color);
+    border-right: 1px solid var(--corner-color);
+  }
+  &__rb {
+    right: 20px;
+    bottom: 20px;
+    border-right: 1px solid var(--corner-color);
+    border-bottom: 1px solid var(--corner-color);
+  }
+  &__lb {
+    left: 20px;
+    bottom: 20px;
+    border-left: 1px solid var(--corner-color);
+    border-bottom: 1px solid var(--corner-color);
+  }
+
+}

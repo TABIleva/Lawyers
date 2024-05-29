@@ -1,0 +1,590 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* body{
+  background-color: red;
+  } */
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Make sure textarea without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: content-box;
+  color: #222;
+  font-size: 20px;
+  font-family: Nunito Sans;
+}
+
+.header {
+  position: relative;
+}
+.header__top {
+  height: 52px;
+  background-color: black;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.header__contacts {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+}
+.header__contacts-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.header__contacts-img {
+  width: 20px;
+  height: 20px;
+}
+.header__contacts-text {
+  color: white;
+  font-size: 14px;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  line-height: 16.8px;
+  word-wrap: break-word;
+}
+.header__call {
+  margin-left: auto;
+  color: #4f8ff0;
+  font-size: 14px;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: 21px;
+  word-wrap: break-word;
+}
+.header__main {
+  height: 112px;
+  background-color: rgba(1, 1, 1, 0.7607843137);
+}
+.header__menu {
+  margin-left: auto;
+}
+.header__menu-list {
+  display: flex;
+  gap: 32px;
+}
+.header__menu-item {
+  color: white;
+  font-size: 18px;
+  font-family: Nunito Sans;
+  font-weight: 700;
+  line-height: 21.6px;
+  word-wrap: break-word;
+}
+
+.logo {
+  color: #4f8ff0;
+  font-size: 28px;
+  font-family: Nunito Sans;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 120%;
+  word-wrap: break-word;
+  width: 312px;
+}
+
+.logo_highlight {
+  color: white;
+  font-size: 20px;
+  font-family: Nunito Sans;
+  font-weight: 900;
+  text-transform: lowercase;
+  line-height: 120%;
+  word-wrap: break-word;
+}
+
+.button {
+  display: block;
+  border: 2px solid #4f8ff0;
+  background: #4f8ff0;
+  padding: 16px 24px;
+  color: #fff;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 16.8px;
+  text-transform: uppercase;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: url(/images/icons/la_hand-pointer.svg), pointer;
+  transition: 0.5s;
+}
+.button:hover {
+  background: white;
+  color: #4f8ff0;
+}
+.button_grey {
+  border: 2px solid #E6E6E6;
+  background: #E6E6E6;
+  color: black;
+}
+.button_grey:hover {
+  border: 2px solid #E6E6E6;
+  background: #FFF;
+  color: black;
+}
+
+.title {
+  color: #222;
+  font-family: "Nunito Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+.title::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 3px;
+  background: #4f8ff0;
+  margin-top: 10px;
+}
+.title_left::after {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.corner {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  z-index: 10;
+  --corner-color:white;
+}
+.corner__lt {
+  top: 20px;
+  left: 20px;
+  border-top: 1px solid var(--corner-color);
+  border-left: 1px solid var(--corner-color);
+}
+.corner__rt {
+  top: 20px;
+  right: 20px;
+  border-top: 1px solid var(--corner-color);
+  border-right: 1px solid var(--corner-color);
+}
+.corner__rb {
+  right: 20px;
+  bottom: 20px;
+  border-right: 1px solid var(--corner-color);
+  border-bottom: 1px solid var(--corner-color);
+}
+.corner__lb {
+  left: 20px;
+  bottom: 20px;
+  border-left: 1px solid var(--corner-color);
+  border-bottom: 1px solid var(--corner-color);
+}
+
+.corner-blue {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  --corner-color:#4F8FF0;
+}
+.corner-blue__lt {
+  top: 20px;
+  left: 20px;
+  border-top: 1px solid var(--corner-color);
+  border-left: 1px solid var(--corner-color);
+}
+.corner-blue__rt {
+  top: 20px;
+  right: 20px;
+  border-top: 1px solid var(--corner-color);
+  border-right: 1px solid var(--corner-color);
+}
+.corner-blue__rb {
+  right: 20px;
+  bottom: 20px;
+  border-right: 1px solid var(--corner-color);
+  border-bottom: 1px solid var(--corner-color);
+}
+.corner-blue__lb {
+  left: 20px;
+  bottom: 20px;
+  border-left: 1px solid var(--corner-color);
+  border-bottom: 1px solid var(--corner-color);
+}
+
+.home {
+  padding-top: 262px;
+  padding-bottom: 268px;
+  margin-top: -112px;
+  background-image: url("../images/main-banner.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.home__title {
+  max-width: 642px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  font-size: 30px;
+  font-family: Nunito Sans;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 45px;
+  margin-bottom: 8px;
+}
+.home__span {
+  color: #4f8ff0;
+  font-size: 56px;
+  font-family: Nunito Sans;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 84px;
+}
+.home__description {
+  color: white;
+  font-size: 20px;
+  font-family: Nunito Sans;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1090px;
+  width: 100%;
+  margin-bottom: 48px;
+}
+.home__button {
+  margin: 0 auto;
+}
+
+.services {
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+.services__title {
+  text-align: center;
+}
+.services__description {
+  max-width: 920px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 48px;
+  margin-top: 24px;
+  color: #222;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+.services__cards-wrapper {
+  max-width: 1350px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  row-gap: 38px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.services__card {
+  padding: 50px 32px;
+  width: 100%;
+  height: 250px;
+  background-color: #fff;
+  cursor: url(/images/icons/la_hand-pointer.svg), pointer;
+  transition: 0.5s;
+  color: black;
+  position: relative;
+}
+.services__card:hover {
+  background-color: #4f8ff0;
+  color: white;
+}
+.services__card:hover path {
+  fill: white;
+}
+.services__card-img {
+  margin: 0 auto;
+  display: block;
+}
+.services__card-title {
+  margin-top: 15px;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30px;
+}
+.services__card-text {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.8px;
+  max-width: 360px;
+  width: 100%;
+}
+.services__button {
+  margin: 0 auto;
+}
+.services__card-corner :hover {
+  opacity: 1;
+}
+
+.about {
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 0px;
+  background-color: #fff;
+}
+.about__container {
+  display: flex;
+  gap: 64px;
+}
+.about__title {
+  text-align: left;
+}
+.about__description {
+  font-size: 16px;
+  max-width: 720px;
+  margin-bottom: 35px;
+}
+.about__picture {
+  max-width: 35vw;
+  max-height: 24vw;
+  box-shadow: 4px 4px 12px 2px rgba(33, 33, 33, 0.25);
+}
+.about__picture-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.about__buttons {
+  display: flex;
+  gap: 24px;
+}
+
+.lawyers {
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+.lawyers__title {
+  text-align: center;
+}
+.lawyers__description {
+  color: #222;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  width: 920px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+.lawyers__wrapper {
+  width: 100%;
+}
+.lawyers__card {
+  width: 312px;
+  height: 414px;
+  background-color: white;
+  position: relative;
+}
+.lawyers__card-visible {
+  width: 100%;
+  transition: 0.3s;
+}
+.lawyers__card-visible:hover {
+  opacity: 0;
+}
+.lawyers__card-img {
+  width: 100%;
+  height: 320px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.lawyers__card-namewrap {
+  margin: 24px;
+}
+.lawyers__card-namewrap2 {
+  margin-top: 83px;
+}
+.lawyers__card-name {
+  color: #222;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+  padding-bottom: 10px;
+}
+.lawyers__card-specialty {
+  color: #222;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.8px;
+  text-transform: lowercase;
+}
+.lawyers__card-specialty:hover {
+  text-transform: none;
+}
+.lawyers__card-invisible {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  transition: 0.3s;
+  background-color: white;
+}
+.lawyers__card-invisible__card-specialty {
+  text-transform: none;
+}
+.lawyers__card-invisible:hover {
+  opacity: 1;
+}
+.lawyers__card-description {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16.8px;
+  margin: 40px 20px;
+}
+.lawyers__card-experience {
+  color: #222;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.2px;
+}/*# sourceMappingURL=style.css.map */
