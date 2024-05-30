@@ -1,0 +1,27 @@
+.title {
+    color: #222;
+    font-family: "Nunito Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 42px;
+    text-transform: uppercase;
+    
+
+    &::after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+        height: 3px;
+        background: #4f8ff0;
+        margin-top: 10px;
+    }
+
+    &_left {
+        &::after {
+            margin: 0;
+            margin-top: 10px;
+        }
+    }
+}

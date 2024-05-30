@@ -1,0 +1,29 @@
+.feedback {
+    &__container {
+        width: 100%;
+        min-height: 580px;
+        // background: url(), center;
+        background: url(/images/mountain.webp);
+        background-position: bottom;
+        background-size: cover;
+        
+        // filter: brightness(1.75);
+        // filter: grayscale(100%);
+        margin: 80px 0px;
+    }
+
+    &__title {
+    }
+    &_left {
+    }
+    &__card {
+        width: 658px;
+        height: 244px;
+        background-color: white;
+    }
+    &__buttons {
+        display: flex;
+        gap: 24px;
+        margin-top: auto;
+    }
+}

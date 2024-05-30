@@ -1,0 +1,31 @@
+.button {
+    display: block;
+    border: 2px solid #4f8ff0;
+    background: #4f8ff0;
+    padding: 16px 24px;
+    color: #fff;
+    text-align: center;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    width: max-content;
+    cursor: url(/images/icons/la_hand-pointer.svg), pointer;
+    // outline: 1px solid var(--black);
+    transition: 0.5s;
+    &:hover {
+        background: white;
+        color: #4f8ff0;
+    }
+    &_grey{
+        border: 2px solid #E6E6E6;
+        background: #E6E6E6;
+        color: black;
+    &:hover{
+            border: 2px solid #E6E6E6;
+background: #FFF;
+color: black;
+        }
+    }
+}
